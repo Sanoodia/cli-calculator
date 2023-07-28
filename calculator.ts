@@ -8,20 +8,20 @@ const validateNumber = (input: any) => {
     }
     return "ReEnter Number";
 };
-const calculate = (answers: {
+const calculate = ({firstNum, secondNum, operator}: {
     firstNum: string,
     secondNum: string,
     operator: string
   }) => {
-    switch (answers.operator) {
+    switch (operator) {
     case "+ (add)":
-        return parseInt(answers.firstNum) + parseInt(answers.secondNum);
+        return parseInt(firstNum) + parseInt(secondNum);
     case "- (minus)":
-        return parseInt(answers.firstNum) - parseInt(answers.secondNum);
+        return parseInt(firstNum) - parseInt(secondNum);
     case "/ (divide)":
-        return parseInt(answers.firstNum) / parseInt(answers.secondNum);
+        return parseInt(firstNum) / parseInt(secondNum);
     case "x (multiply)":
-        return parseInt(answers.firstNum) * parseInt(answers.secondNum);
+        return parseInt(firstNum) * parseInt(secondNum);
     default:
         return "invalid operator";
     }

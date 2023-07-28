@@ -7,16 +7,16 @@ const validateNumber = (input) => {
     }
     return "ReEnter Number";
 };
-const calculate = (answers) => {
-    switch (answers.operator) {
+const calculate = ({ firstNum, secondNum, operator }) => {
+    switch (operator) {
         case "+ (add)":
-            return parseInt(answers.firstNum) + parseInt(answers.secondNum);
+            return parseInt(firstNum) + parseInt(secondNum);
         case "- (minus)":
-            return parseInt(answers.firstNum) - parseInt(answers.secondNum);
+            return parseInt(firstNum) - parseInt(secondNum);
         case "/ (divide)":
-            return parseInt(answers.firstNum) / parseInt(answers.secondNum);
+            return parseInt(firstNum) / parseInt(secondNum);
         case "x (multiply)":
-            return parseInt(answers.firstNum) * parseInt(answers.secondNum);
+            return parseInt(firstNum) * parseInt(secondNum);
         default:
             return "invalid operator";
     }
