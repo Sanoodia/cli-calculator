@@ -55,7 +55,7 @@ const calculator = async() =>{
     await promptMoreCalculation()
 }
 const promptMoreCalculation = async() =>{
-    const continuePrompt: {
+    const {toBeContinue}: {
         toBeContinue: boolean
       } = await inquirer.prompt([
         {
@@ -64,7 +64,7 @@ const promptMoreCalculation = async() =>{
           message: "Do you want to perform more actions",
         },
     ])
-    if(continuePrompt.toBeContinue === true){
+    if(toBeContinue === true){
         await calculator();
     }else
         console.log(chalk.blue("Have a Nice Day!"));

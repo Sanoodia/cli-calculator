@@ -46,14 +46,14 @@ const calculator = async () => {
     await promptMoreCalculation();
 };
 const promptMoreCalculation = async () => {
-    const continuePrompt = await inquirer.prompt([
+    const { toBeContinue } = await inquirer.prompt([
         {
             name: "toBeContinue",
             type: "confirm",
             message: "Do you want to perform more actions",
         },
     ]);
-    if (continuePrompt.toBeContinue === true) {
+    if (toBeContinue === true) {
         await calculator();
     }
     else
