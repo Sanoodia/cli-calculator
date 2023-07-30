@@ -1,13 +1,16 @@
 {
-  "name": "cli-calculator",
+  "name": "sanoodia-cli-calculator",
   "version": "1.0.0",
-  "description": "",
+  "description": "Cli calculator",
   "type": "module",
   "main": "calculator.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run tsc && node calculator.js",
     "tsc": "tsc"
+  },
+  "bin": {
+    "calculator": "./calculator.js"
   },
   "author": "",
   "license": "ISC",
